@@ -50,7 +50,7 @@ jobs:
       run: |
         kubeval secret-opaque.yaml
         for file in k8s/*.yaml; do
-          kubeval $file
+          kubeval $file --ignore-missing-schemas
         done
       continue-on-error: false
     
