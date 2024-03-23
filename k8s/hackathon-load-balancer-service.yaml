@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: clientes-load-balancer
-  name: clientes-load-balancer
+    app: hackathon-load-balancer
+  name: hackathon-load-balancer
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
     service.beta.kubernetes.io/aws-load-balancer-internal: "true"
@@ -13,5 +13,5 @@ spec:
     protocol: TCP
     targetPort: 6001
   selector:
-    app: clientes-deployment
+    app: hackathon-deployment
   type: LoadBalancer
